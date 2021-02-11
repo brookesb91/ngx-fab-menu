@@ -1,11 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { NgxFabMenuModule } from 'ngx-fab-menu';
+
 import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule],
+  imports: [BrowserModule, NgxFabMenuModule],
   providers: [],
   bootstrap: [AppComponent],
 })
