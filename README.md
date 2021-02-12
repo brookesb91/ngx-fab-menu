@@ -9,7 +9,7 @@
 ### Quick Start
 
 ```bash
-$ npm i @brookes/ngx-fab-menu
+$ npm i @dev-bits/ngx-fab-menu
 ```
 
 ```ts

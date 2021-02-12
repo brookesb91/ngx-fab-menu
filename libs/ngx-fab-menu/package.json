@@ -1,6 +1,7 @@
 {
-  "name": "@brookes/ngx-fab-menu",
+  "name": "@dev-bits/ngx-fab-menu",
   "version": "1.0.0",
+  "private": false,
   "peerDependencies": {
     "@angular/common": "^11.0.9",
     "@angular/core": "^11.0.9"

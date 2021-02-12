@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { NgxFabMenuModule } from '@brookes/ngx-fab-menu';
+import { NgxFabMenuModule } from '@dev-bits/ngx-fab-menu';
 
 import { AppComponent } from './app.component';
 

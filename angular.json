@@ -152,7 +152,7 @@
         }
       }
     },
-    "@brookes/ngx-fab-menu": {
+    "@dev-bits/ngx-fab-menu": {
       "projectType": "library",
       "root": "libs/ngx-fab-menu",
       "sourceRoot": "libs/ngx-fab-menu/src",
