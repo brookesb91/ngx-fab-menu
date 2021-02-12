@@ -6,6 +6,34 @@
 
 ![Demo Example](/screenshots/demo.gif)
 
+### Quick Start
+
+```bash
+npm i ngx-fab-menu
+```
+
+```ts
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+// Import ngx-fab-menu
+import { NgxFabMenuModule } from 'ngx-fab-menu';
+
+import { AppComponent } from './app.component';
+
+@NgModule({
+  declarations: [AppComponent],
+  imports: [
+    BrowserModule,
+    // Add to imports
+    NgxFabMenuModule,
+  ],
+  providers: [],
+  bootstrap: [AppComponent],
+})
+export class AppModule {}
+```
+
 ### Example
 
 ```html
@@ -35,6 +63,8 @@
 
 ### Customisation
 
+#### Properties
+
 Default styling can be overridden with the following inputs.
 
 | Input              | Type     | Description                                              | Default                             |
@@ -47,6 +77,8 @@ Default styling can be overridden with the following inputs.
 | `triggerSize`      | `string` | Size of the FAB on both axes                             | `64px`                              |
 | `triggerBoxShadow` | `string` | FAB box shadow                                           | `0 2px 4px 2px rgba(0, 0, 0, 0.25)` |
 | `menuItemHeight`   | `string` | Menu item height (Only affects default markup structure) | `64px`                              |
+
+#### Example
 
 ```html
 <ngx-fab-menu
