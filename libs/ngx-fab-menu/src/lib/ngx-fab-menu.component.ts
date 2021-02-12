@@ -20,8 +20,6 @@ export class NgxFabMenuComponent {
   @Input()
   set backgroundColor(value: string) {
     this.setProperty('--fab-menu-background', value);
-    this.setProperty('--fab-menu-background-opacity-1', `${value}66`);
-    this.setProperty('--fab-menu-background-opacity-2', `${value}33`);
   }
 
   @Input()

@@ -3,14 +3,6 @@ $fab-menu-background: #000000 !default;
   @return var(--fab-menu-background, #{$fab-menu-background});
 }
 
-@function fab-menu-background-opacity-1() {
-  @return var(--fab-menu-background-opacity-1, #{rgba($fab-menu-background, 0.66)});
-}
-
-@function fab-menu-background-opacity-2() {
-  @return var(--fab-menu-background-opacity-2, #{rgba($fab-menu-background, 0.33)});
-}
-
 $fab-menu-color: #ffffff !default;
 @function fab-menu-color() {
   @return var(--fab-menu-color, #{$fab-menu-color});
@@ -100,7 +92,30 @@ $fab-menu-backdrop-box-shadow-size: 32px !default;
   transform: scale(0);
   transform-origin: bottom right;
   transition: all 0.3s ease-out;
-  box-shadow: fab-menu-backdrop-box-shadow();
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background: fab-menu-background();
+    border-top-left-radius: fab-menu-backdrop-radius();
+  }
+
+  &::before {
+    z-index: fab-menu-z1() - 1;
+    height: calc(#{fab-menu-backdrop-size()} + #{$fab-menu-backdrop-box-shadow-size});
+    width: calc(#{fab-menu-backdrop-size()} + #{$fab-menu-backdrop-box-shadow-size});
+    opacity: 0.66;
+  }
+  &::after {
+    z-index: fab-menu-z1() - 2;
+    height: calc(#{fab-menu-backdrop-size()} + #{$fab-menu-backdrop-box-shadow-size * 2});
+    width: calc(#{fab-menu-backdrop-size()} + #{$fab-menu-backdrop-box-shadow-size * 2});
+    opacity: 0.33;
+  }
 }
 
 @mixin fab-menu-backdrop-open() {
