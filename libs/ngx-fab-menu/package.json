@@ -1,6 +1,6 @@
 {
   "name": "@brookes/ngx-fab-menu",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "peerDependencies": {
     "@angular/common": "^11.0.9",
     "@angular/core": "^11.0.9"
