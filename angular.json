@@ -152,11 +152,11 @@
         }
       }
     },
-    "ngx-fab-menu": {
+    "@brookes/ngx-fab-menu": {
       "projectType": "library",
       "root": "libs/ngx-fab-menu",
       "sourceRoot": "libs/ngx-fab-menu/src",
-      "prefix": "ngx-fab-menu",
+      "prefix": "ngx",
       "architect": {
         "build": {
           "builder": "@nrwl/angular:package",

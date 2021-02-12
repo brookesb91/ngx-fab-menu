@@ -9,7 +9,7 @@
 ### Quick Start
 
 ```bash
-npm i ngx-fab-menu
+$ npm i @brookes/ngx-fab-menu
 ```
 
 ```ts
@@ -17,7 +17,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 // Import ngx-fab-menu
-import { NgxFabMenuModule } from 'ngx-fab-menu';
+import { NgxFabMenuModule } from '@brookes/ngx-fab-menu';
 
 import { AppComponent } from './app.component';
 

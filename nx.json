@@ -37,7 +37,7 @@
         "demo"
       ]
     },
-    "ngx-fab-menu": {
+    "@brookes/ngx-fab-menu": {
       "tags": []
     }
   }
