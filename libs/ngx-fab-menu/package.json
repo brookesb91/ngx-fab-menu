@@ -2,6 +2,11 @@
   "name": "@dev-bits/ngx-fab-menu",
   "version": "1.0.0",
   "private": false,
+  "homepage": "https://github.com/brookesb91/ngx-fab-menu",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brookesb91/ngx-fab-menu.git"
+  },
   "peerDependencies": {
     "@angular/common": "^11.0.9",
     "@angular/core": "^11.0.9"
