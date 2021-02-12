@@ -2,6 +2,7 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
+  ElementRef,
   HostBinding,
   HostListener,
   Input,
@@ -16,50 +17,47 @@ import {
   encapsulation: ViewEncapsulation.ShadowDom,
 })
 export class NgxFabMenuComponent {
-  // Backdrop main color
   @Input()
-  @HostBinding('style.--fab-menu-background')
-  backgroundColor: string;
-
-  // FAB text color
-  @Input()
-  @HostBinding('style.--fab-menu-color')
-  color: string;
-
-  // FAB right-side inset
-  @Input()
-  @HostBinding('style.--fab-menu-inset-right')
-  insetRight: string;
-
-  // FAB bottom-side inset
-  @Input()
-  @HostBinding('style.--fab-menu-inset-bottom')
-  insetBottom: string;
-
-  // FAB Backdrop size
-  @Input()
-  @HostBinding('style.--fab-menu-backdrop-size')
-  backdropSize: string;
+  set backgroundColor(value: string) {
+    this.setProperty('--fab-menu-background', value);
+    this.setProperty('--fab-menu-background-opacity-1', `${value}66`);
+    this.setProperty('--fab-menu-background-opacity-2', `${value}33`);
+  }
 
   @Input()
-  @HostBinding('style.--fab-menu-backdrop-radius')
-  backdropRadius: string;
+  set color(value: string) {
+    this.setProperty('--fab-menu-color', value);
+  }
 
   @Input()
-  @HostBinding('style.--fab-menu-backdrop-opacity')
-  backdropOpacity: string;
+  set backdropSize(value: string) {
+    this.setProperty('--fab-menu-backdrop-size', value);
+  }
 
   @Input()
-  @HostBinding('style.--fab-menu-trigger-size')
-  triggerSize: string;
+  set backdropRadius(value: string) {
+    this.setProperty('--fab-menu-backdrop-radius', value);
+  }
 
   @Input()
-  @HostBinding('style.--fab-menu-trigger-box-shadow')
-  triggerBoxShadow: string;
+  set backdropOpacity(value: string) {
+    this.setProperty('--fab-menu-backdrop-opacity', value);
+  }
 
   @Input()
-  @HostBinding('style.--fab-menu-item-height')
-  menuItemHeight: string;
+  set triggerSize(value: string) {
+    this.setProperty('--fab-menu-trigger-size', value);
+  }
+
+  @Input()
+  set triggerBoxShadow(value: string) {
+    this.setProperty('--fab-menu-trigger-box-shadow', value);
+  }
+
+  @Input()
+  set menuItemHeight(value: string) {
+    this.setProperty('--fab-menu-item-height', value);
+  }
 
   private _isOpen = false;
   @HostBinding('class.open')
@@ -71,11 +69,15 @@ export class NgxFabMenuComponent {
     this._isOpen = value;
   }
 
-  constructor(private cdr: ChangeDetectorRef) {}
+  constructor(private cdr: ChangeDetectorRef, private el: ElementRef) {}
 
   @HostListener('click', [])
   clicked() {
     this._isOpen = !this._isOpen;
     this.cdr.markForCheck();
+  }
+
+  private setProperty(name: string, value: string) {
+    this.el.nativeElement.style.setProperty(name, value);
   }
 }
