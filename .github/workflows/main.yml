@@ -22,7 +22,7 @@ jobs:
       - name: Install & Build
         run: |
           npm i
-          nx build ngx-fab-menu --prod
+          npm run build:lib
 
       - name: Push To Release
         uses: ncipollo/release-action@v1
