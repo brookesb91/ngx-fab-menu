@@ -29,4 +29,4 @@ jobs:
         with:
           artifacts: "dist/libs/ngx-fab-menu/*"
           token: ${{ secrets.TOKEN }}
-          tag: ${{ github.ref }}
+          tag: v1.0.0
