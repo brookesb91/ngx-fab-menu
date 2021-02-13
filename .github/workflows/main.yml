@@ -27,6 +27,6 @@ jobs:
       - name: Push To Release
         uses: ncipollo/release-action@v1.8.0
         with:
-          artifacts: "dist/libs/ngx-fab-menu/*"
+          artifacts: "dist/libs/ngx-fab-menu/**/*"
           token: ${{ secrets.TOKEN }}
           tag: v1.0.0
