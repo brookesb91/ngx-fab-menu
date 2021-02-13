@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@dev-bits/ngx-fab-menu": ["libs/ngx-fab-menu/src/index.ts"]
+      "ngx-fab-menu": ["libs/ngx-fab-menu/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
