@@ -25,7 +25,7 @@ jobs:
           npm run build:lib
 
       - name: Push To Release
-        uses: ncipollo/release-action@v1
+        uses: ncipollo/release-action@v1.8
         with:
           artifacts: "dist/libs/ngx-fab-menu/*"
           token: ${{ secrets.TOKEN }}
