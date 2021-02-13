@@ -19,14 +19,16 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Install & Build
+      - name: Install, Build & Pack
         run: |
           npm i
           npm run build:lib
+          cd dist/libs/ngx-fab-menu
+          npm pack
 
       - name: Push To Release
         uses: ncipollo/release-action@v1.8.0
         with:
-          artifacts: "dist/libs/ngx-fab-menu/**/*"
+          artifacts: "dist/libs/ngx-fab-menu/ngx-fab-menu-1.0.0.tgz"
           token: ${{ secrets.TOKEN }}
           tag: v1.0.0
