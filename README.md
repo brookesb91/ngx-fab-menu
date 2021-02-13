@@ -5,6 +5,8 @@
 ---
 
 ![Demo Example](/screenshots/demo.gif)
+![Custom Demo Example](/screenshots/demo-1.gif)
+![Custom Demo Example](/screenshots/demo-2.gif)
 
 ### Quick Start
 
