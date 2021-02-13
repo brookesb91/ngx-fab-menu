@@ -9,7 +9,7 @@
 ### Quick Start
 
 ```bash
-$ npm i git+https://github.com/brookesb91/ngx-fab-menu.git
+$ npm i https://github.com/brookesb91/ngx-fab-menu/releases/download/v1.0.0/ngx-fab-menu-1.0.0.tgz
 ```
 
 ```ts
